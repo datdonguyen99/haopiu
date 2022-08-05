@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hảo 'píu' giải pass đi nào</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<script type="text/javascript">
+    function display(form) {
+        if (form.username.value === "nguyenlehaohao042") {
+            if (form.password.value === "14122001") {
+                location = "intro.html"
+            } else {
+                new Audio("sound/duck.mp3").play();
+                alert("PASSWORD sai rùi:((( Liu Liu ^_^")
+            }
+        }
+        else {
+            new Audio("sound/duck.mp3").play();
+            alert("KEY sai rùi:((( Liu Liu ^_^")
+        }
+    }
+</script>
+
+<body>
+    <header>
+        <div class="container">
+            Hello Hảo píu ^_^
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="login-form">
+                <form action="" method="post">
+                    <h1>Please Log in</h1>
+                    <div class="input-box">
+                        <i></i>
+                        <input type="text" name="username" placeholder="Nhập KEY ở đây nha!">
+                    </div>
+                    <div class="input-box">
+                        <i></i>
+                        <input type="password" name="password" placeholder="Nhập PASSWORD ở đây nè!">
+                    </div>
+                    <div class="btn-box">
+                        <input type="button" value="Login nào" onClick="display(this.form)" />
+                    </div>
+                </form>
+            </div>
+            <div class="key-solution">
+                <h3>KEY SECTION</h3>
+                <div class="left-column">
+                    <img src="./img/key.png" />
+                </div>
+                <div class="right-column">
+                    <fieldset>
+                        <legend class="key-legend">Key information will be provided below:
+                        </legend>
+                        <input class="squaredcheck" type="radio" checked="checked"><span>
+                            <strong>6 8 2 : </strong> One digit is correct and right place
+                        </span><br>
+                        <input class="squaredcheck" type="radio" checked="checked"><span>
+                            <strong>6 1 4 : </strong> One digit is correct but wrong place
+                        </span><br>
+                        <input class="squaredcheck" type="radio" checked="checked"><span>
+                            <strong>2 0 6 : </strong> Two digits are correct but wrong place
+                        </span><br>
+                        <input class="squaredcheck" type="radio" checked="checked"><span>
+                            <strong>7 3 8 : </strong> None of digit is correct
+                        </span><br>
+                        <input class="squaredcheck" type="radio" checked="checked"><span>
+                            <strong>7 8 0 : </strong> One digit is correct but wrong place
+                        </span><br>
+                    </fieldset>
+                </div>
+                <div class="key-password">
+                    <p>
+                        KEY will contain your full name and 3 digits that you have solved problem above in order from
+                        left to right.
+                    </p>
+                </div>
+            </div>
+
+            <div class="password-solution">
+                <h3>PASSWORD SECTION</h3>
+                <div class="password-intro">
+                    <p>After solving above problem. I got 3 digits, but it is not enough digit to random a password.
+                        So, I have added an extra digit(digit 1). After that, I generated randomly the natural number
+                        contains 6 digits from 4 digits above. Unfortunately, I forgot click `remember me` checkbox
+                        which make me couldn't login automatically into website. On the other hand, one of the most
+                        important things is that the content of some next pages is the message I would like to send to
+                        you. Would you mind deducing a long password that I accidentally forgot and sending it to me via
+                        <u>https://facebook.com/datdo</u>?
+                    </p>
+                </div>
+                <div class="password-infor">
+                    <fieldset>
+                        <legend class="password-legend">Some features of the natural number will be provided below:
+                        </legend>
+                        <input class="passwordcheck" type="radio" checked="checked">Sum of 4th digit, 5th digit and 8th
+                        digit is equal to the sum of 2nd digit, 3rd digit, 6th digit and 7th digit.<br>
+                        <input class="passwordcheck" type="radio" checked="checked">Sum of 1st digit and 2nd digit is
+                        equal to the sum of 3rd digit, 4th digit and 5th digit.<br>
+                        <input class="passwordcheck" type="radio" checked="checked">4th digit is equal to the sum of 1st
+                        digit and 3rd digit.<br>
+                        <input class="passwordcheck" type="radio" checked="checked">2nd digit is equal to the sum of 4th
+                        digit and 5th digit.<br>
+                        <input class="passwordcheck" type="radio" checked="checked">4th digit is equal to the sum of 3rd
+                        digit and 8th digit.<br>
+                        <input class="passwordcheck" type="radio" checked="checked">Sum of two first digit is a prime
+                        number.<br>
+                        <span><u>Note:</u> First digit is the digit from left hand side to right hand side of the
+                            natural number.
+                        </span>
+                    </fieldset>
+                </div>
+                <div class="key-password">
+                    <p>
+                        PASSWORD will contain 8 digit of the natural number in order from left to right.
+                    </p>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <div class="container">
+            August/3rd/2022 by Đỗ
+        </div>
+    </footer>
+</body>
+
+</html>

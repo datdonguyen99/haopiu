@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(236, 185, 119, 0.4);
+        }
+
+        /* Modal Header */
+        .modal-header {
+            padding: 2px 16px;
+            background-color: rgba(18, 18, 19, 0.15);
+            color: rgba(12, 10, 10);
+        }
+
+        /* Modal Body */
+        .modal-body {
+            padding: 2px 16px;
+            background-color: rgba(18, 18, 19, 0.15);
+        }
+
+        /* Modal Footer */
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: rgba(18, 18, 19, 0.15);
+            color: rgb(12, 10, 10);
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Add Animation */
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="totinh.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
+</head>
+
+<body onload="on()" onunload="s()">
+    <div id="header-plugin"></div>
+    <div class="bg_heart"></div>
+    <h1 id="loveQuestion">Hảo píu làm người yêu anh Đỗ nhé ♥♥♥?</h1>
+    <!-- <input type="button" id="btnYes" value="CÓ NÈ" onclick="yesClick()" /> -->
+    <input type="button" id="btnNo" value="HÔNG NHÁ" onmouseover="noHover()" />
+    <div id="co">
+        <a href="#" data-reveal-id="myModal"><input type="button" id="btnYes" value="CÓ NÈ" />
+        </a>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header" style="text-align: center">
+                <span class="close">&times;</span>
+                <center>
+                    <h1>ANH BIẾT MÀ</h1> <img src="img/1.gif" />
+                </center>
+                <h2>Nếu câu trả lời hồi nãy là ép buộc thì hãy trả lời lại nhé :v.</h2>
+                <h4>(Nhập câu trả lời xuống bên dưới và bấm --> GỬI ĐI)</p>
+            </div>
+            <div class="modal-body" style="text-align: center">
+                <form id="f" name="f">
+                    <input id="form" name="txt" type="text" />
+                    <div>
+                        <input id="gui" onclick="Yeu()" type="button" value="Gửi đi" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div id="divResult" style="text-align: center"></div>
+                <div id="divResult2" style="text-align: center"></div>
+                <div id="divResult3" style="text-align: center"></div>
+                <div id="divResult4" style="text-align: center"></div>
+                <div id="divResult5" style="text-align: center"></div>
+                <div id="divResult6" style="text-align: center"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("btnYes");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+            new Audio("sound/tick.mp3").play();
+            new Audio("sound/sound.mp3").play();
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
