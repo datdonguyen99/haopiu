@@ -12,6 +12,8 @@
     function display(form) {
         if (form.username.value === "nguyenlehaohao042") {
             if (form.password.value === "14122001") {
+                localStorage.setItem("haoUsername", form.username.value);
+                localStorage.setItem("haoPassword", form.password.value);
                 location = "intro.html"
             } else {
                 new Audio("sound/duck.mp3").play();
