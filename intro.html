@@ -43,6 +43,10 @@
     </div>
 
     <script language="javascript">
+        var haoUsername = localStorage.getItem("haoUsername");
+        var haoPassword = localStorage.getItem("haoPassword");
+        localStorage.removeItem("haoUsername");
+        localStorage.removeItem("haoPassword");
         var i = 0;
         function addListItem() {
             new Audio("sound/Swish1.mp3").play();
@@ -112,6 +116,8 @@
                 message.innerHTML += "<h3>Buồn vì đợi Hảo làm người iu anh Đỗ lâu quá đó :)))</h3>";
             }
             else if (i == 22) {
+                localStorage.setItem("haoUsername", haoUsername);
+                localStorage.setItem("haoPassword", haoPassword);
                 location = "totinh.html";
             }
             else {
@@ -122,9 +128,8 @@
             var scroll = document.getElementById("scroll");
             scroll.scrollTop = scroll.scrollHeight;
         }
-        document.getElementById('click').addEventListener('click', addListItem, true);
+        document.getElementById('click').addEventListener('click', addListItem, true)
     </script>
-
 </body>
 
 </html>
